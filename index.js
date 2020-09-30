@@ -55,9 +55,7 @@ client.connect((err) => {
       console.log(`${result.insertedCount} items inserted to the Database`);
     });
   });
-
-  console.log(err);
 });
 
 const port = 5000;
-app.listen(port, () => console.log(`App is listening to ${port}`));
+app.listen(process.env.PORT || port);
